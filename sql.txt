@@ -1,0 +1,18 @@
+BMS sql
+
+category[categoryId category]
+book[bookId bookName author]
+bookCategory[bookId categoryId stock]
+user[userId userName phone]
+borrowRecord[AI userId categoryId date state(0/1)]
+returnRecord[AI ]
+
+
+
+图书：   Book(BookID, BookNo, BookName, BookWriter, BookPublish,BookDate,BookClass,BookState, BookRNo) 
+读者：   Reader(ReaID,ReaName,ReaSex,ReaNo,ReaLBID, ReaDep, ReaGrade, ReaPref, ReaDate，Reasx) 
+管理员： Manager (MID,MName,MSex) 
+馆室：   Room(RoomNo,RoomMID,RoomNum,RoomAddre) 
+借阅信息：Borrow(BookID,ReaderID,BookName,BookWriter, Outdate,YHdate) 
+借阅历史：History(BookID,ReaderID,BookName,BookWriter, Outdate, Indate,YHdate)
+罚款信息：Fine (BookID,ReaderID,BookName,Outdate,Indate,Fine, CLState,MID)

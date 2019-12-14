@@ -1,0 +1,41 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link th:href="@{static/bootstrap/css/bootstrap.css}" rel="stylesheet">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">访问model</h3>
+    </div>
+</div>
+
+<div th:if="${not #lists.isEmpty(bookList)}">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">访问列表</h3>
+        </div>
+    </div>
+    <div class="panel-body">
+        <ul class="list-group">
+            <li class="list-group-item">
+                <span class="span1">bookId</span>
+                <span class="span2">bookName</span>
+                <span class="span3">author</span>
+            </li>
+            <li class="list-group-item" th:each="book:${bookList}">
+                <span class="span2" th:text="${book.bookId}"></span>
+                <span class="span2" th:text="${book.bookName}"></span>
+                <span class="span2" th:text="${book.author}"></span>
+            </li>
+        </ul>
+    </div>
+
+    <a href="/bms/addBook">addBook</a>
+</div>
+</body>
+</html>

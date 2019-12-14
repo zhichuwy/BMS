@@ -1,0 +1,17 @@
+server:
+ port: 8090
+ servlet:
+  session:
+   timeout: 86400s
+
+# MySQL ≈‰÷√
+spring:
+ datasource:
+  driver-class-name: com.mysql.cj.jdbc.Driver
+  url: jdbc:mysql://127.0.0.1:3306/halodb?characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+  username: root
+  password: root
+
+ thymeleaf:
+  prefix: "classpath:/templates/"
+  suffix: ".html"
